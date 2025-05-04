@@ -1,4 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    // change 1 : (3-6 lines)
+    // بعض الأذونات عشان اقدر استخدم كاميرا كيت
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
@@ -6,14 +8,20 @@
     <application
         android:label="final_camera_app"
         android:name="${applicationName}"
+        // change 2
         android:requestLegacyExternalStorage="true"
         android:icon="@mipmap/ic_launcher"
+        // change 3
         android:theme="@style/AppTheme">
+        // change 4
         <meta-data
             android:name="com.snap.camerakit.app.id"
+            // id of your app, الموجود جمب اسم التطبيق في كاميرا كيت
             android:value="cb79046d-dff8-4e3f-8c08-1b10c4eff09c" />
+        // change 5
         <meta-data
             android:name="com.snap.camerakit.api.token"
+            // token الموجودفي ال staging
             android:value="eyJhbGciOiJIUzI1NiIsImtpZCI6IkNhbnZhc1MyU0hNQUNQcm9kIiwidHlwIjoiSldUIn0.eyJhdWQiOiJjYW52YXMtY2FudmFzYXBpIiwiaXNzIjoiY2FudmFzLXMyc3Rva2VuIiwibmJmIjoxNzQyMTI4NTY4LCJzdWIiOiJjYjc5MDQ2ZC1kZmY4LTRlM2YtOGMwOC0xYjEwYzRlZmYwOWN-U1RBR0lOR342ZjAwMzc4Ny1mMzg0LTQ3MDctYWFkZC0yMzdkY2NjYTdiYWIifQ.2Bc1sVRRDsSFrH99hR0HI751gkwwn4lpQfvRmieHyXA" />
 
         <activity
